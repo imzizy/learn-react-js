@@ -25,7 +25,12 @@ var CommentBox = React.createClass({
     },
     componentDidMount(){
         this.loadCommentsFromServer();
-        setInterval(this.loadCommentsFromServer(), this.props.pollInterval);
+
+        // the reason why there is just a function name
+        // instead of a function call ('function()') is that
+        // the first parameter passed to 'setInterval()'
+        // should be a function not a function call.
+        setInterval(this.loadCommentsFromServer, this.props.pollInterval);
     },
     render: function () {
         return (
