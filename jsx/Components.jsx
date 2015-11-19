@@ -68,7 +68,7 @@ var CommentForm = React.createClass({
         this.setState({author: e.target.value});
     },
     handleTextChange: function (e) {
-        this.setState({author: e.target.value});
+        this.setState({text: e.target.value});
     },
     handleSubmit: function(e){
         e.preventDefault();
