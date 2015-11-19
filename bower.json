@@ -1,0 +1,26 @@
+{
+  "name": "react",
+  "authors": [
+    "Zizy <mezizy@live.com>"
+  ],
+  "description": "learn react-js",
+  "main": "test01.html",
+  "moduleType": [],
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "babel-browser": "*",
+    "bootstrap": "~3.3.5",
+    "babel": "*"
+  }
+}
