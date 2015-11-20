@@ -60,9 +60,9 @@ var CommentBox = React.createClass({
     render: function () {
         return (
             <div className="commentBox">
-                <h1>Comments</h1>
-                <CommentList data={this.state.data}/>
                 <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+                <h1><span className="center-block text-center">Comments</span></h1>
+                <CommentList data={this.state.data}/>
             </div>
         );
     }
@@ -95,17 +95,19 @@ var CommentForm = React.createClass({
     },
     render: function () {
         return (
-            <div className="commentForm">
-                <form className="commentForm" onSubmit={this.handleSubmit}>
-                    <input type="text"
-                           value={this.state.author}
+            <div className="commentForm form-control-static">
+                <form className="commentForm"  onSubmit={this.handleSubmit}>
+                    <input  type="text"
+                            className="form-group form-control "
+                             value={this.state.author}
                            onChange={this.handleAuthorChange}
                            placeholder="Your name"/>
                     <input type="text"
+                           className="form-group form-control "
                            onChange={this.handleTextChange}
                            value={this.state.text}
                            placeholder="Say something"/>
-                    <input type="submit" value="Post"/>
+                    <input type="submit" className="form-control btn btn-success" value="Post"/>
                 </form>
             </div>
         )
@@ -116,13 +118,19 @@ var CommentForm = React.createClass({
 
 var CommentList = React.createClass({
     render: function () {
-        var commentNodes = this.props.data.map(function (comment) {
+        var commentNodes = this.props.data.reverse().map(function (comment) {
             return (
-                <Comment author={comment.author} key={comment.id}>
-                    {comment.text}
-                </Comment>
+                <div>
+                    <Comment author={comment.author} key={comment.id}>
+                        {comment.text}
+                    </Comment>
+                    <hr />
+                </div>
+
+
             )
         });
+
         return (
             <div className="commentList">
                 {commentNodes}
