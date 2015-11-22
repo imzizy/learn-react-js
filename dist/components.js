@@ -15,7 +15,7 @@ var Comment = React.createClass({
             { className: "comment" },
             React.createElement(
                 "h2",
-                { className: "commentAuthor" },
+                { className: "commentAuthor text-info" },
                 this.props.author
             ),
             React.createElement("span", { dangerouslySetInnerHTML: this.rawMarkup() })
@@ -85,7 +85,7 @@ var CommentBox = React.createClass({
                 null,
                 React.createElement(
                     'span',
-                    { className: 'center-block text-center text-info' },
+                    { className: 'center-block text-center' },
                     'Comments'
                 )
             ),
@@ -93,11 +93,6 @@ var CommentBox = React.createClass({
         );
     }
 });
-
-//ReactDOM.render(
-//    <CommentBox url='http://localhost:3000/comments' pollInterval={2000}/>,
-//    document.getElementById('container')
-//);
 'use strict';
 
 var CommentForm = React.createClass({

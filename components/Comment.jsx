@@ -9,7 +9,7 @@ var Comment = React.createClass({
     render: function () {
         return (
             <div className="comment">
-                <h2 className="commentAuthor">
+                <h2 className="commentAuthor text-info">
                     {this.props.author}
                 </h2>
                 <span dangerouslySetInnerHTML={this.rawMarkup()}/>

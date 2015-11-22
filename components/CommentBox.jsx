@@ -57,14 +57,9 @@ var CommentBox = React.createClass({
         return (
             <div className="commentBox">
                 <CommentForm onCommentSubmit={this.handleCommentSubmit} />
-                <h1><span className="center-block text-center text-info">Comments</span></h1>
+                <h1><span className="center-block text-center">Comments</span></h1>
                 <CommentList data={this.state.data}/>
             </div>
         );
     }
 });
-
-//ReactDOM.render(
-//    <CommentBox url='http://localhost:3000/comments' pollInterval={2000}/>,
-//    document.getElementById('container')
-//);
