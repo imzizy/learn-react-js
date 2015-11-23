@@ -12,7 +12,7 @@ https://facebook.github.io/react/docs/tutorial.html
     npm install nodemon -g
     
 ## Start 
-    babel --watch components -o dist/components.js
+    babel --watch components main.js -o dist/components.js
     nodemon server.js
     
     
