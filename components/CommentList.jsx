@@ -1,6 +1,7 @@
+var Comment= require('./Comment.jsx');
+var React = require('react');
 
-
-var CommentList = React.createClass({
+module.exports = React.createClass({
     render: function () {
         var commentNodes = this.props.data.reverse().map(function (comment) {
             return (
