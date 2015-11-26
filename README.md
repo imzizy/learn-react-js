@@ -8,11 +8,12 @@ https://facebook.github.io/react/docs/tutorial.html
 ## Install
     npm install 
     bower install
-    npm install babel@5 -g
+    
     npm install nodemon -g
+    npm install gulp -g
     
 ## Start 
-    babel --watch components main.js -o dist/components.js
+    gulp
     nodemon server.js
     
     

@@ -1,4 +1,7 @@
-var Comment = React.createClass({
+var marked = require('marked');
+var React = require('react');
+
+module.exports= React.createClass({
     rawMarkup: function () {
         var rawMarkup = marked(marked(this.props.children.toString(), {sanitize: true}))
         //sanitize: true 过滤HTML语法, 然而不是标签过滤

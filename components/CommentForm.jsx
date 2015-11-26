@@ -1,5 +1,6 @@
+var React = require('react');
 
-var CommentForm = React.createClass({
+module.exports= React.createClass({
     getInitialState: function () {
         return {author: '', text: ''};
     },
